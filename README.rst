@@ -20,28 +20,28 @@ final product:
 
 ::
 
-                           +----------------------+
-                           | UI/Application       |
-                           |                      |
-                           |  +----------------+  |
-                           |  |AssistdoneMobile|  |
-                           |  +----------------+  |
-                           +----------------------+
-                                /           \
-                               /             \
-                              +               +
-    +--------------------------------+     +--------------------------------+
-    | Domain Model                   |     | Infrastructure                 |
-    |                                |     |                                |
-    |       +-------------+          |     |  +-------+     +------------+  |
-    |       |GtdDefinition|          |     |  |Badulik|     |Time library|  |
-    |       +-------------+          |     |  +-------+     +------------+  |
-    |           /     \              |----+|                                |
-    |          +       +             |     |                                |
-    |  +--------+    +------------+  |     |  +-------+     +-----+         |
-    |  |GtdStuff|    |GtdInventory|  |     |  |Java ME|     |JSON |         |
-    |  +--------+    +------------+  |     |  +-------+     +-----+         |
-    +--------------------------------+     +--------------------------------+
+                            +----------------------+
+                            | UI/Application       |
+                            |                      |
+                            |  +----------------+  |
+                            |  |AssistdoneMobile|  |
+                            |  +----------------+  |
+                            +----------------------+
+                                 /           \
+                                /             \
+                               +               +
+    +--------------------------------+    +--------------------------------+
+    | Domain Model                   |    | Infrastructure                 |
+    |                                |    |                                |
+    |       +-------------+          |    |  +-------+     +------------+  |
+    |       |GtdDefinition|          |    |  |Badulik|     |Time library|  |
+    |       +-------------+          |    |  +-------+     +------------+  |
+    |           /     \              |---+|                                |
+    |          +       +             |    |                                |
+    |  +--------+    +------------+  |    |  +-------+     +-----+         |
+    |  |GtdStuff|    |GtdInventory|  |    |  |Java ME|     |JSON |         |
+    |  +--------+    +------------+  |    |  +-------+     +-----+         |
+    +--------------------------------+    +--------------------------------+
 
 
 GtdDefinition (applies DDD)
@@ -53,10 +53,12 @@ GtdStuff (applies DDD and Command (the 'C' on CQRS))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 This component models the GTD processing and its Stuff lifetime.
 
+
 GtdInventory (applied DDD and Query (the 'Q' on CQRS))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 This component models the GTD inventory. Because GTD inventory
 has the same concept as Query, it also contains the Query logic.
+
 
 FeatureSpec (applied DDD and BDD)
 '''''''''''''''''''''''''''''''''
@@ -64,6 +66,7 @@ This component doesn't appear on the above diagram because it's
 not needed in the final product. However, this component plays
 important role in validating the Domain Model representation of
 `GtdDefinition`, `GtdStuff`, and `GtdInventory`.
+
 
 AssistdoneMobile
 ''''''''''''''''
