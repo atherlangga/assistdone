@@ -44,26 +44,27 @@ final product:
     +--------------------------------+     +--------------------------------+
 
 
-* GtdDefinition (applies DDD)
+GtdDefinition (applies DDD)
+'''''''''''''''''''''''''''
+This component models basic representation for GTD.
 
-    This component models basic representation for GTD.
 
-* GtdStuff (applies DDD and Command (the 'C' on CQRS))
+GtdStuff (applies DDD and Command (the 'C' on CQRS))
+''''''''''''''''''''''''''''''''''''''''''''''''''''
+This component models the GTD processing and its Stuff lifetime.
 
-    This component models the GTD processing and its Stuff lifetime.
+GtdInventory (applied DDD and Query (the 'Q' on CQRS))
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+This component models the GTD inventory. Because GTD inventory
+has the same concept as Query, it also contains the Query logic.
 
-* GtdInventory (applied DDD and Query (the 'Q' on CQRS))
+FeatureSpec (applied DDD and BDD)
+'''''''''''''''''''''''''''''''''
+This component doesn't appear on the above diagram because it's
+not needed in the final product. However, this component plays
+important role in validating the Domain Model representation of
+`GtdDefinition`, `GtdStuff`, and `GtdInventory`.
 
-    This component models the GTD inventory. Because GTD inventory
-    has the same concept as Query, it also contains the Query logic.
-
-* FeatureSpec (applied DDD and BDD)
-
-    This component doesn't appear on the above diagram because it's
-    not needed in the final product. However, this component plays
-    important role in validating the Domain Model representation of
-    `GtdDefinition`, `GtdStuff`, and `GtdInventory`.
-
-* AssistdoneMobile
-
-    This component is the "glue" for everything.
+AssistdoneMobile
+''''''''''''''''
+This component acts the "glue" for everything.
