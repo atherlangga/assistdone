@@ -70,4 +70,4 @@ important role in validating the Domain Model representation of
 
 AssistdoneMobile
 ''''''''''''''''
-This component acts the "glue" for everything.
+This component acts as the "glue" for everything.
